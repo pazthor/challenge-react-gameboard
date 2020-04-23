@@ -1,16 +1,15 @@
-import React from 'react'
+import React from "react";
 
-const LoginComponent = () => {
-  
+const LoginComponent = ({onchangeButton}) => {
   return (
     <>
-    <div>
-      <span>Iniciar sesión o login</span>
-      <input></input>
-      <button> iniciar sesión</button>
-    </div>
+      <div>
+        <span>Iniciar sesión o login</span>
+        <input />
+        <button onClick={() => onchangeButton()}> iniciar sesión</button>
+      </div>
     </>
-  )
-}
+  );
+};
 
 export default LoginComponent;
