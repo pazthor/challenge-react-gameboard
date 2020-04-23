@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
-import "./App.css";
+import LoginComponent from "./LoginComponent";
+import BoardComponent from "./Board";
 
 function App() {  
   const [isLoginState, setIsLoginstate] = useState(false)
@@ -11,9 +12,9 @@ function App() {
   }, [])
   return (
     <>
-      {isLoginState ? <BoardComponent /> : <LoginComponent />}
+      {isLoginState ? <BoardComponent /> : <LoginComponent onchangeButton={()=> setIsLoginstate(true)} />}
 
-      <EndGameModal />
+      
     </>
   );
 }
