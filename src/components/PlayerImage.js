@@ -1,10 +1,11 @@
-import React from 'react'
+import React from "react";
 
-const PlayerImage = ({image}) => {
+const PlayerImage = ({ image }) => {
   return (
-    <> 
+    <>
+      <img src={image} alt="Player" />
     </>
-  )
-}
+  );
+};
 
 export default PlayerImage;
