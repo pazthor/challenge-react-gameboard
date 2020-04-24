@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
-import { store, StateProvider } from './store';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {  StateProvider } from './store';
 ReactDOM.render(
   <React.StrictMode>
     <StateProvider>
