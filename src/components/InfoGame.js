@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
 import {store} from '../store';
-import {postNextTurn} from '../actions'
-import { Navbar, Nav, FormControl, Form, Button } from "react-bootstrap";
+import {postNextTurn,getMonsterFromGame, getPlayersFromGame, getPlayerCards} from '../actions'
+import { Navbar, Nav, Form, Button } from "react-bootstrap";
 
 const InfoGame = ({gameId, current, past, left}) => {
-const {setGame,setMonsterEffect, cardSelected, setCardSelected} = useContext(store)
+const {setGame,setMonsterEffect, cardSelected, setCardSelected, setPlayer, setMonster, setCardList} = useContext(store)
 
 const onNextTurn = async (id, gameId) => {
   
@@ -12,6 +12,13 @@ const onNextTurn = async (id, gameId) => {
   setGame(game);
   setMonsterEffect(monsterEffect)
   setCardSelected(false)
+  const monster = await getMonsterFromGame(gameId);
+  const player = await getPlayersFromGame(gameId);
+  const cards =  await getPlayerCards(id)    
+  
+  setCardList(cards)
+  setPlayer(player);
+  setMonster(monster);
 }
 
 
