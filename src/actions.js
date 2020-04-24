@@ -4,9 +4,9 @@ import { URLS } from "./utils/URLS";
 
 export const getGame = (id)  => {
 
-  FetchGet(`${URLS.getGame + id}`)
+  return FetchGet(`${URLS.getGame + id}`)
   .then(res => {      
-    console.log(res.data);
+    
     return res
   })
   .catch(err => {
@@ -17,9 +17,9 @@ export const getGame = (id)  => {
 
 export const getPlayersUsingId = (id)  => {
 
-  FetchGet(`${URLS.getPlayersUsingId + id}`)
+  return FetchGet(`${URLS.getPlayersUsingId + id}`)
   .then(res => {      
-    console.log(res.data);
+    
     return res
   })
   .catch(err => {
@@ -30,9 +30,9 @@ export const getPlayersUsingId = (id)  => {
 
 export const getMonsterUsingId = (id)  => {
 
-  FetchGet(`${URLS.getMonsterUsingId + id}`)
+  return FetchGet(`${URLS.getMonsterUsingId + id}`)
   .then(res => {      
-    console.log(res.data);
+    
     return res
   })
   .catch(err => {
@@ -41,11 +41,11 @@ export const getMonsterUsingId = (id)  => {
   });
 }
 
-export const getPlayersFromGame = (id)  => {
+export const getPlayersFromGame = async (id)  => {
 
-  FetchGet(`${URLS.getPlayersFromGame + id}/player`)
+  return FetchGet(`${URLS.getPlayersFromGame + id}/player`)
   .then(res => {      
-    console.log(res.data);
+    
     return res
   })
   .catch(err => {
@@ -54,11 +54,11 @@ export const getPlayersFromGame = (id)  => {
   });
 }
 
-export const getMonsterFromGame = (id)  => {
+export const getMonsterFromGame = async (id)  => {
 
-  FetchGet(`${URLS.getMonsterFromGame + id}/monster`)
+  return FetchGet(`${URLS.getMonsterFromGame + id}/monster`)
   .then(res => {      
-    console.log(res.data);
+    
     return res
   })
   .catch(err => {
@@ -69,11 +69,11 @@ export const getMonsterFromGame = (id)  => {
 
 
 
-export const getPlayerCards = (id)  => {
+export const getPlayerCards = async (id)  => {
 
-  FetchGet(`${URLS.getGame + id}/cards`)
+return  FetchGet(`${URLS.getGame + id}/cards`)
   .then(res => {      
-    console.log(res.data);
+    
     return res
   })
   .catch(err => {
@@ -83,9 +83,9 @@ export const getPlayerCards = (id)  => {
 }
 export const postCreateNewGame = (name)  => {
 
-  FetchPost(`${URLS.getGame}`, {name: name})
+  return FetchPost(`${URLS.getGame}`, {name: name})
   .then(res => {      
-    console.log(res.data);
+    
     return res
   })
   .catch(err => {
@@ -96,9 +96,9 @@ export const postCreateNewGame = (name)  => {
 
 export const postNextTurn = (id, cardId)  => {
 
-  FetchPost(`${URLS.getGame + id}/next-turn`, {card: cardId})
+  return FetchPost(`${URLS.getGame + id}/next-turn`, {card: cardId})
   .then(res => {      
-    console.log(res.data);
+    
     return res
   })
   .catch(err => {
