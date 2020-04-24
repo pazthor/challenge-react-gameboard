@@ -6,7 +6,7 @@ import { Container } from "react-bootstrap";
 import {postCreateNewGame} from "../actions";
 
 function App() {
-  const [isLoginState, setIsLoginstate] = useState(true);
+  const [isLoginState, setIsLoginstate] = useState(false);
   const { gameInfo, monster, player, reset, setGame} = useContext(store);
   const handleReset = () => {
     setIsLoginstate(false);
