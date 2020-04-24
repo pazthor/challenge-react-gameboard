@@ -1,19 +1,20 @@
 import React from "react";
+import { Card, ListGroup } from "react-bootstrap";
 
-const PlayerStatus = ({ name, hPMax, healthPoints, shield }) => {
+const PlayerStatus = ({ name, hPMax, healthPoints, shield, image }) => {
   return (
     <>
-      <div>
-        <div>
-          <h3> Name: {name} </h3>
-        </div>
-        <div>
-          <span>
+      <br />
+      <Card style={{ width: "18rem" }}>
+        <Card.Img variant="top" src={image} />
+        <ListGroup variant="flush">
+          <ListGroup.Item>Name: {name}</ListGroup.Item>
+          <ListGroup.Item>
             HP: {healthPoints}/{hPMax}
-          </span>
-          <span>Shiled: {shield}</span>
-        </div>
-      </div>
+          </ListGroup.Item>
+          <ListGroup.Item>Shiled: {shield}</ListGroup.Item>
+        </ListGroup>
+      </Card>
     </>
   );
 };

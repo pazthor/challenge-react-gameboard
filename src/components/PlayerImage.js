@@ -1,9 +1,16 @@
 import React from "react";
+import { Media, Image, Container, Row, Col } from "react-bootstrap";
 
-const PlayerImage = ({ image }) => {
+const PlayerImage = ({ image = "holder.js/64x64" }) => {
   return (
     <>
-      <img src={image} alt="Player" />
+      <Container>
+        <Row>
+          <Col xs={6} md={4}>
+            <Image roundedCircle thumbnail src={image} alt="Player" />
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 };

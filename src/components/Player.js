@@ -2,18 +2,23 @@ import React from "react";
 import PropTypes from "prop-types";
 import PlayerStatus from "./PlayerStatus";
 import PlayerImage from "./PlayerImage";
+import { Container } from "react-bootstrap";
 
 const Player = ({ type, player }) => {
   const userInfo = (player) => {
     return (
       <>
-        <PlayerImage image={player.image} />
+      <Container>
+      
         <PlayerStatus
+        image={type?`${process.env.PUBLIC_URL}/defaultUser.png`:player.image}
           name={player.name}
           hPMax={player.maxHp}
           healthPoints={player.hp}
           shield={player.shield}
         />
+      </Container>
+        
       </>
     );
   };
