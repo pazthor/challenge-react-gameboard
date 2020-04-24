@@ -28,8 +28,8 @@ const BoardComponent = ({
     <>
       <InfoGame
         current={currentTurn}
-        past={turnsLeft}
-        left={maxTurns - currentTurn}
+        past={currentTurn - 1}
+        left={turnsLeft}
         maxTurn={maxTurns}
         gameId={id}
       />
