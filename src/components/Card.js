@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
+import {store} from '../store'
 
-const Card = ({ card }) => {
+const Card = ({ id, effect }) => {
+  const {setCardSelected} = useContext(store)
+  const onCardSelected = () => {
+    setCardSelected(id);
+  }
+  
   return (
     <>
-      {card}
-      <button> Secret Card</button>
+      
+      <button onClick={ onCardSelected}> {effect } Secret Card</button>
     </>
   );
 };
