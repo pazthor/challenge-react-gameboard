@@ -1,6 +1,6 @@
 import React from "react";
 
-const PlayerStatus = ({ name, hPMax, healtPoints, shield }) => {
+const PlayerStatus = ({ name, hPMax, healthPoints, shield }) => {
   return (
     <>
       <div>
@@ -9,7 +9,7 @@ const PlayerStatus = ({ name, hPMax, healtPoints, shield }) => {
         </div>
         <div>
           <span>
-            HP: {healtPoints}/{hPMax}
+            HP: {healthPoints}/{hPMax}
           </span>
           <span>Shiled: {shield}</span>
         </div>
