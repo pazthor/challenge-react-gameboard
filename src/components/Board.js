@@ -34,6 +34,7 @@ const BoardComponent = ({
         gameId={id}
       />
       <Players gameId={id} />
+      <br />
       <Cards />
       <ModalEndGame
         show={endGame}
