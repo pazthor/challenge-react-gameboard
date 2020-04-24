@@ -1,5 +1,5 @@
-export const FetchGet = async (urlWithParams = "", sessionToken = "") => {
-  const rawResponse = await fetch(urlWithParams)
+export const FetchGet = async (urlWithParams = "") => {
+  const result = await fetch(urlWithParams)
     .then(response => {
       return response.json();
     })
@@ -8,6 +8,6 @@ export const FetchGet = async (urlWithParams = "", sessionToken = "") => {
       return []
     });
 
-  const result = rawResponse;
+  
   return result;
 };
