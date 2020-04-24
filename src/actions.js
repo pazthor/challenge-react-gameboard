@@ -71,7 +71,7 @@ export const getMonsterFromGame = async (id)  => {
 
 export const getPlayerCards = async (id)  => {
 
-return  FetchGet(`${URLS.getGame + id}/cards`)
+return  FetchGet(`${URLS.getPlayerCards + id}/cards`)
   .then(res => {      
     
     return res
@@ -94,11 +94,11 @@ export const postCreateNewGame = (name)  => {
   });
 }
 
-export const postNextTurn = (id, cardId)  => {
+export const postNextTurn = async (id, cardId)  => {
 
   return FetchPost(`${URLS.getGame + id}/next-turn`, {card: cardId})
   .then(res => {      
-    
+    console.log(res)
     return res
   })
   .catch(err => {
