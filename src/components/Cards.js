@@ -10,8 +10,7 @@ const Cards = () => {
     const getCards = async (id) => {
       
       const cards =  await getPlayerCards(id)    
-      console.log('cards')
-      console.log(cards)
+      
       setCardList(cards)
       
      }
@@ -20,7 +19,7 @@ const Cards = () => {
     
   }, [player])
   const showCards = (lists) => {
-    console.log(lists)
+    
     const result =  lists.map((x,index) => {
       
       return <Card key={index} id={x.id} value={x.value} effect={x.effect} />
