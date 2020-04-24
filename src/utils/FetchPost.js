@@ -9,7 +9,7 @@ export const FetchPost = async (url = "", data = {}) => {
     body: JSON.stringify(data),
   })
     .then((dataJson) => {
-      return { data: dataJson };
+      return dataJson.json() ;
     })
     .catch((err) => {
       console.log(err);
