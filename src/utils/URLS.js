@@ -5,7 +5,7 @@ export const URLS = {
   getMonsterUsingId:`${BASENAME_URL}/monsters`,
   getPlayersFromGame:`${BASENAME_URL}/games/`,
   getMonsterFromGame:`${BASENAME_URL}/games/`,
-  getPlayerCards:`${BASENAME_URL}/playrs/`,
+  getPlayerCards:`${BASENAME_URL}/players/`,
   postCreateNewGame:`${BASENAME_URL}/games/`,
   postNextTurn:`${BASENAME_URL}/games/`,
 }
